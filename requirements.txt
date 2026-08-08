@@ -1,0 +1,10 @@
+biopython
+pybedtools
+pandas
+numpy
+scikit-learn
+scipy
+kneed
+plotly
+matplotlib
+seaborn
