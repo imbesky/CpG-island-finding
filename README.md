@@ -87,17 +87,17 @@ Examines which features contribute to the models' species classification predict
 ## Key Findings & Interpretation
 
 1. Limited Species Separation in CGI Physical Features — or Insufficient Discriminative Signal
-DBSCAN unsupervised clustering placed the vast majority of CGI physical features (GC content, length, and observed/expected CpG ratio) in a single cluster, with some observations classified as noise, across all three species.
+	DBSCAN unsupervised clustering placed the vast majority of CGI physical features (GC content, length, and observed/expected CpG ratio) in a single cluster, with some observations classified as noise, across all three species.
 This may reflect overlap in the measured feature distributions across the three species, limited discriminative power of the selected features, or sensitivity to the chosen clustering parameters.
 The current analysis cannot distinguish among these explanations or establish evolutionary conservation from the clustering results alone.
 
 2. Species-Associated Differences in *B. juncea*
-One-way **ANOVA** detected statistically significant differences among the three species in all three physical features: CGI length, GC content, and observed/expected CpG ratio ($p < 0.001$ for each feature).
+	One-way **ANOVA** detected statistically significant differences among the three species in all three physical features: CGI length, GC content, and observed/expected CpG ratio ($p < 0.001$ for each feature).
 Non-parametric **KDE plots** also showed differences in CGI length and GC content distributions, particularly for *B. juncea*.
 These findings describe species-associated patterns in the analyzed datasets.
 
 3. Classification Performance and Feature Importance
-Supervised decision tree models achieved approximately 62% accuracy in species classification across the observed runs, compared with 33.3% accuracy expected under uniform random guessing.
+	Supervised decision tree models achieved approximately 62% accuracy in species classification across the observed runs, compared with 33.3% accuracy expected under uniform random guessing.
 Because the class distribution was imbalanced, this comparison alone does not establish strong classification performance.
 Feature-importance analysis highlighted **GC content** among the physical features and **GC-rich trinucleotides** among the k-mer features as influential predictors in the observed models.
 However, the ranking of individual trinucleotides varied between runs, so no single 3-mer can be considered a stable, dominant species discriminator based on the current results.
